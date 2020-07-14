@@ -1,0 +1,42 @@
+{
+  "name": "background-jobs",
+  "version": "1.0.0",
+  "main": "src/app.ts",
+  "license": "MIT",
+  "scripts": {
+    "start": "node dist/server.js",
+    "start:dev": "nodemon src/server.ts",
+    "process_queues": "node dist/queue.js",
+    "process_queues:dev": "nodemon src/queue.ts",
+    "test": "NODE_ENV=test tap src/**/*.test.ts",
+    "test:dev": "yarn test --reporter=list --watch",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "bull": "^3.15.0",
+    "dotenv": "^8.2.0",
+    "fastify": "^3.0.2",
+    "ioredis": "^4.17.3",
+    "mongoose": "^5.9.24",
+    "nodemailer": "^6.4.10"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
+    "@types/bull": "^3.14.0",
+    "@types/ioredis": "^4.17.2",
+    "@types/mongoose": "^5.7.31",
+    "@types/node": "^14.0.23",
+    "@types/nodemailer": "^6.4.0",
+    "@typescript-eslint/eslint-plugin": "^3.6.1",
+    "@typescript-eslint/parser": "^3.6.1",
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.21.2",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "nodemon": "^2.0.4",
+    "sucrase": "^3.15.0",
+    "typescript": "^3.9.6"
+  }
+}
